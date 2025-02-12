@@ -7,8 +7,6 @@ function App() {
     <>
       <div className='container'>
         <AR />
-
-        {/* Hii */}
       </div>
     </>
   )

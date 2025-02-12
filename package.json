@@ -10,13 +10,9 @@
     "preview": "vite preview",
     "host": "vite --host"
   },
-  "engines": {
-    "node": "22.x"
-  },
   "dependencies": {
     "@react-three/drei": "^9.121.4",
     "@react-three/fiber": "^8.17.14",
-    "canvas": "^3.1.0",
     "mind-ar": "^1.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

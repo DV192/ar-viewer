@@ -1,13 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { MindARThree } from 'mind-ar/dist/mindar-image-three.prod.js';
-import * as THREE from 'three';
-import { useGLTF } from '@react-three/drei';
-
-const DEG2RAD = THREE.MathUtils;
+import React, { useEffect, useRef } from "react";
+import { MindARThree } from "mind-ar/dist/mindar-image-three.prod.js";
+import * as THREE from "three";
+import { useGLTF } from "@react-three/drei";
 
 const AR = () => {
   const containerRef = useRef(null);
-  const gltf = useGLTF("/butterfly-1.glb");
+  const gltf = useGLTF("/butterfly.glb");
   const mixer = useRef(null); // Animation mixer
 
   useEffect(() => {
