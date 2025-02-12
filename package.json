@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "host": "vite --host"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": ">=6.0.0"
   },
   "dependencies": {
     "@react-three/drei": "^9.121.4",
