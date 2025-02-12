@@ -11,8 +11,7 @@
     "host": "vite --host"
   },
   "engines": {
-    "node": "16.x",
-    "npm": ">=6.0.0"
+    "node": "22.x"
   },
   "dependencies": {
     "@react-three/drei": "^9.121.4",
