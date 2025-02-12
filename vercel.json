@@ -3,6 +3,6 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "ignoreCommand": "exit 0"
+    "ignoreCommand": "npm uninstall canvas || exit 0"
   }
 }
