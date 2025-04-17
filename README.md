@@ -1,6 +1,13 @@
 # 🦋 AR Butterfly Experience: Nature Comes Alive Through AR
 
-[![AR Experience Preview](public/ar-viewer-screenshot.png)](https://ar-viewer-v1.web.app/)
+<p align="center">
+  <a href="https://ar-viewer-v1.web.app/">
+    <img src="public/ar-viewer-screenshot-1.png" alt="AR Experience Preview" height="600" />
+  </a>  
+  <a href="https://ar-viewer-v1.web.app/">
+    <img src="public/ar-viewer-screenshot-2.png" alt="AR Experience Preview" height="600" />
+  </a>
+</p>
 
 **AR Butterfly Experience** invites users into a lightweight, web-based augmented reality scene where a vibrant 3D butterfly appears through the camera when scanning a custom image marker. Built entirely with web technologies and deployed on Firebase, this experience is mobile-friendly, installation-free, and visually delightful.
 
@@ -13,7 +20,7 @@ Through the lens of your device, watch a delicate butterfly flutter into your sp
 💡 **Real-Time Lighting:** Uses Three.js lighting for lifelike model rendering  
 📱 **Mobile-Optimized:** Designed for mobile browsers with simple, intuitive UI  
 🧼 **Clean Lifecycle Management:** Properly stops camera stream and renderer on route changes  
-🚀 **Firebase Hosted:** Live on a fast and reliable CDN for quick sharing  
+🚀 **Firebase Hosted:** Live on a fast and reliable CDN for quick sharing
 
 ## 🛠️ Built With
 
@@ -45,12 +52,14 @@ Make sure you have the following installed:
 ### 📦 Installation
 
 Clone the repository
+
 ```bash
 git clone https://github.com/dv192/ar-viewer.git
 cd ar-viewer
 ```
 
 Install dependencies
+
 ```bash
 npm install
 ```
@@ -58,6 +67,7 @@ npm install
 ### 🧪 Usage (Development)
 
 Start the development server
+
 ```bash
 npm run dev
 ```
@@ -71,11 +81,13 @@ This project is deployed on [Firebase](https://firebase.google.com/). Visit the 
 To deploy on Firebase Hosting:
 
 Build for production
+
 ```bash
 npm run build
 ```
 
 Deploy to Firebase
+
 ```bash
 firebase deploy
 ```
