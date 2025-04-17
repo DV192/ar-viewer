@@ -55,12 +55,15 @@ function CameraAccess() {
             <div>
               <p>Camera access was denied. Please allow access in settings and try again.</p>
               <p>
-                "Camera access was denied. To enable it:" <br />
-              "🔹 Chrome: Click the lock 🔒 icon in the address bar &gt; Enable Camera.\n" <br />
-              "🔹 Safari: Go to Settings &gt; Safari &gt; Camera &gt; Allow.\n" <br />
-              "🔹 Firefox: Go to Permissions &gt; Manage Permissions &gt; Allow.\n\n" <br />
-                "After enabling, refresh the page and try again."
+                Camera access was denied. To enable it:
+                <ul>
+                  <li>🔹 Chrome: Click the lock 🔒 icon in the address bar &gt; Enable Camera</li>
+                  <li>🔹 Safari: Settings &gt; Safari &gt; Camera &gt; Allow</li>
+                  <li>🔹 Firefox: Permissions &gt; Manage Permissions &gt; Allow</li>
+                </ul>
+                After enabling, refresh the page and try again.
               </p>
+
               <button onClick={handleRetry}>Retry</button>
             </div>
           ) : (

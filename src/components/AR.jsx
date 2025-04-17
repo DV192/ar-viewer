@@ -17,7 +17,6 @@ const AR = () => {
       imageTargetSrc: "/butterfly.mind"
     });
 
-    // if (!flag) {
     const { renderer, scene, camera } = mindarThree;
     const anchor = mindarThree.addAnchor(0);
 
@@ -34,8 +33,6 @@ const AR = () => {
 
     // Load GLB Model
     if (gltf) {
-      console.log(gltf.animations);
-
       const model = gltf.scene;
       model.scale.set(0.5, 0.5, 0.5); // Adjust size
       model.position.set(0, 0, 0); // Adjust position
@@ -63,20 +60,56 @@ const AR = () => {
     // ✅ Animate loop for smooth animation
     const clock = new THREE.Clock();
     renderer.setAnimationLoop(() => {
-      const delta = 0.75 * clock.getDelta();
+      const delta = clock.getDelta();
       if (mixer.current) mixer.current.update(delta); // Update animation
       renderer.render(scene, camera);
     });
-    // }
 
     return () => {
+      // 1. Stop the render loop
       renderer.setAnimationLoop(null);
+
+      // 2. Stop MindAR and remove the canvas
       mindarThree.stop();
+
+      // 3. Manually stop the camera stream
+      const video = mindarThree.video;
+      if (video && video.srcObject) {
+        video.srcObject.getTracks().forEach((track) => track.stop());
+        video.srcObject = null;
+      }
+
+      // 4a. Remove the canvas element
+      const canvas = containerRef.current?.querySelector('canvas');
+      if (canvas && canvas.parentNode) {
+        canvas.parentNode.removeChild(canvas);
+      }
+
+      // 4b. Remove the video element
+      const videoEl = containerRef.current?.querySelector('video');
+      if (videoEl && videoEl.parentNode) {
+        videoEl.parentNode.removeChild(videoEl);
+      }
+
+      // 5. Optionally dispose renderer
+      renderer.dispose();
+
+      // 6. Cleanup animations
+      if (mixer.current) {
+        mixer.current.stopAllAction();
+        mixer.current.uncacheRoot(gltf.scene);
+      }
+
+      // 7. Remove MindAR UI Overlay
+      const overlay = document.querySelectorAll(".mindar-ui-overlay");
+      overlay.forEach((el) => {
+        el.parentNode.removeChild(el);
+      });
     }
   }, []);
 
   return (
-    <div className='ar-container' style={{ width: "100%", height: "100%" }} ref={containerRef}>
+    <div className='ar-container z-[1]' style={{ width: "100%", height: "100%" }} ref={containerRef}>
     </div>
   )
 }
