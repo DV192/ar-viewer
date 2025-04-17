@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 .firebaserc
 .vercel
+
+# Firebase
+.firebase/
+*.cache
