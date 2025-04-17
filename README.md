@@ -1,5 +1,7 @@
 # 🦋 AR Butterfly Experience: Nature Comes Alive Through AR
 
+[![AR Experience Preview](public/ar-viewer-screenshot.png)](https://ar-viewer-v1.web.app/)
+
 **AR Butterfly Experience** invites users into a lightweight, web-based augmented reality scene where a vibrant 3D butterfly appears through the camera when scanning a custom image marker. Built entirely with web technologies and deployed on Firebase, this experience is mobile-friendly, installation-free, and visually delightful.
 
 Through the lens of your device, watch a delicate butterfly flutter into your space - rendered with real-time lighting, animation, and immersive marker-based tracking. This project demonstrates the magic of WebAR using React, Three.js, and MindAR.js.
@@ -53,7 +55,7 @@ Install dependencies
 npm install
 ```
 
-### Usage
+### 🧪 Usage (Development)
 
 Start the development server
 ```bash
@@ -62,7 +64,7 @@ npm run dev
 
 Visit http://localhost:5173 in your browser.
 
-## Deployment
+## 🚀 Deployment
 
 This project is deployed on [Firebase](https://firebase.google.com/). Visit the live version [here](https://ar-viewer-v1.web.app/).
 
