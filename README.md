@@ -1,13 +1,19 @@
 # 🦋 AR Butterfly Experience: Nature Comes Alive Through AR
 
-<div style="width: 100%; display: flex; gap: 10px">
-  <a href="https://ar-viewer-v1.web.app/">
-    <img src="public/ar-viewer-screenshot-1.png" alt="AR Experience Preview" width="600" />
-  </a>
-  <a href="https://ar-viewer-v1.web.app/">
-    <img src="public/ar-viewer-screenshot-2.png" alt="AR Experience Preview" width="560" />
-  </a>
-</div>
+<table style="width: 100%;">
+  <tr>
+    <td align="center">
+      <a href="https://ar-viewer-v1.web.app/">
+        <img src="public/ar-viewer-screenshot-1.png" alt="AR Experience Preview" width="600" />
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://ar-viewer-v1.web.app/">
+        <img src="public/ar-viewer-screenshot-2.png" alt="AR Experience Preview" width="560" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 **AR Butterfly Experience** invites users into a lightweight, web-based augmented reality scene where a vibrant 3D butterfly appears through the camera when scanning a custom image marker. Built entirely with web technologies and deployed on Firebase, this experience is mobile-friendly, installation-free, and visually delightful.
 
